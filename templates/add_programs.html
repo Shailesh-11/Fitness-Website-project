@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Contact</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+
+        }
+                
+       header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+            
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+
+        }
+        #contact {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            flex: 1; 
+
+        }
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            flex-shrink: 0; /* Prevent footer from shrinking */
+        }
+    </style>
+</head>
+<body>
+    
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action = '/edit_programs', method = 'POST'>
+            <label for="name" >Title:</label>
+            <input type="text" id="name" name="title" placeholder="Enter title" required>
+            <label for="email">Description:</label>
+            <input type="text" id="email" name="description" placeholder="Enter description" required>
+            <button type="submit">Send</button>
+            <h4>return to edit panel <a href="/edit_programs">return</a></h4>
+        </form>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

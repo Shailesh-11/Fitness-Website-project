@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Store</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        
+                }
+       header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+        }
+        #store {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+            flex: 1;
+        }
+        #store h2 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .product h3 {
+            color: #444;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        .product ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product li {
+            margin: 20px 0;
+        }
+        .product a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .product a:hover {
+            text-decoration: underline;
+        }
+        .product img {
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #333;">
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/programs">Programs</a></li>
+                <li><a href="/store">Store</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/test">Testimonials</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="store">
+        <h2>Our Store</h2>
+
+        <div class="product">
+            <h3>Fitness Equipment</h3>
+            <p>Explore our range of fitness equipment:</p>
+            <ul>
+                <li>
+                    <a href="https://cultsport.com/rpm4000-4-5-hp-dc-motorized-treadmill/product/3631">Treadmills</a>
+                    <div><img src="{{url_for('static',filename='/tredmill.webp')}}" height="100" width="150" alt="Treadmills"></div>
+                </li><hr>
+                <li>
+                    <a href="https://cultsport.com/cultsport-dublin-adjustable-dumbbells-5-kg-to-40-kg-easy-weight-change-17-in-1-40-kg-pack-of-2/product/5572">Dumbbells</a>
+                    <div><img src="{{url_for('static',filename='dumbles.webp')}}" height="100" width="150" alt="Dumbbells"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.google.com/search?q=yoga+mat+ama">Yoga Mats</a>
+                    <div><img src="{{url_for('static',filename='/yoga mat.webp')}}" height="100" width="150" alt="Yoga Mats"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.amazon.in/SLOVIC-Resistance-Containing-Exercises-Multicolor/dp/B08H87CXNR/">Resistance Bands</a>
+                    <div><img src="{{url_for('static',filename='/resistance_band.jpg')}}" height="100" width="150" alt="Resistance Bands"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.amazon.in/Kettlebell-Exercise-Kettle-Weights-Fitness/dp/B08GYR11PS/">Kettlebells</a>
+                    <div><img src="{{url_for('static',filename='/kettlebells.jpg')}}" height="100" width="150" alt="Kettlebells"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.amazon.in/Powermax-Fitness-Bike-Exercise/dp/B08L3QNCFL/">Exercise Bikes</a>
+                    <div><img src="{{url_for('static',filename='/exe bike.jpg')}}" height="100" width="150" alt="Exercise Bikes"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.amazon.in/Concept2-Indoor-Rowing-Machine/dp/B01I0IYZTK/">Rowing Machines</a>
+                    <div><img src="{{url_for('static',filename='/Rowing Machines.jpg')}}" height="100" width="150" alt="Rowing Machines"></div>
+                </li><hr>
+                <li>
+                    <a href="https://www.amazon.in/Skipping-Rope-Adults-Best/dp/B07H9T52LM/">Jump Ropes</a>
+                    <div><img src="{{url_for('static',filename='/jumpping rope.jpg')}}" height="100" width="150" alt="Jump Ropes"></div>
+                </li><hr>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

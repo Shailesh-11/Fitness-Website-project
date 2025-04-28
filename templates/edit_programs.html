@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Home</title>
+    <style>
+        .button {
+    margin-left: 1200px;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  width: 100px  ;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 1px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+   body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+                }
+       header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+        }
+        #home {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+            flex: 1; /* Grow to fill remaining vertical space */
+        }
+        #home h1 {
+            color: #333;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+        #home p {
+            color: #666;
+            font-size: 18px;
+            margin: 10px 0 30px;
+        }
+     
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            flex-shrink: 0; /* Prevent footer from shrinking */
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    </style>
+</head>  
+<body><a href="/login"><button class="button" role="button" >LOGOUT</button></a>
+    <header style="background-color: #333;">
+        <nav>
+            <ul>
+                <li><a href="/edit_about">About</a></li>
+                <li><a href="/edit_programs">Programs</a></li>
+                <li><a href="/edit_store">Store</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to edit panel</h1>
+
+    </section>
+    <table>
+  <tr>
+    <th>Program title</th>
+    <th>Program description</th>
+    <th><a href="/add_programs"><button class="btn btn-dark">Add</button></a></th>
+  </tr>
+
+{% for program in edit_programs|reverse %}
+  <tr>
+    <td> {{program.title}} </td>
+    <td> {{program.description}} </td>
+    <td><a href="/delete/{{edit_programs.title}}"> <button class="btn btn-danger" > Delete </button></a></td>
+  </tr>
+{% endfor %}
+  
+</table>
+
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Home</title>
+    <style>
+
+
+.button {
+    margin-left: 1200px;
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 30px;
+  width: 100px  ;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 1px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+                }
+       header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+        }
+        #home {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+            flex: 1; /* Grow to fill remaining vertical space */
+        }
+        #home h1 {
+            color: #333;
+            font-size: 36px;
+            margin-top: 20px;
+        }
+        #home p {
+            color: #666;
+            font-size: 18px;
+            margin: 10px 0 30px;
+        }
+        #home img {
+            width: 100%;
+            max-width: 1500px;
+            height: auto;
+            opacity: 0.5;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            flex-shrink: 0; /* Prevent footer from shrinking */
+        }
+    </style>
+</head>  
+<body><a href="/login"><button class="button" role="button" >LOGOUT</button></a>
+    <header style="background-color: #333;">
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/programs">Programs</a></li>
+                <li><a href="/store">Store</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/test">Testimonials</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul><a href="/admin_login">
+            <button class="button" role="button" style="margin-left:1160px;
+            padding-left: 80px;
+            padding-right: 80px;" >Admin Login</button></a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <img src="{{ url_for('static', filename='home.webp') }}" alt="Fitness Banner">
+        <h1>Welcome to Our Fitness website</h1>
+        <p>Your journey to a healthier life starts here.</p>
+    </section>
+    <center></center>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

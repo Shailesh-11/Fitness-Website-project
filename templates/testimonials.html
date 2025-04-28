@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Testimonials</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header style=" background-color: #333;">
+        <h2>Give your Feedback:</h2>
+    </header>
+    <section id="testimonials">
+    <h2>Testimonials</h2>
+    
+    <form action="/testimonials" method="POST">
+        <tr>
+            <label for="name" style="padding: 10px;">Name:</label>
+            <input type="text" id="name" name="name" ></tr>
+        <br>
+        <br>
+        <tr>
+            <label for="tests" >Testimonials:</label>
+            <textarea type="message"id="tests" name="tests" ></textarea>
+        </tr>
+        <br>
+        <br>
+        <tr>
+           <td> <button type="submit" > Submit</button></td>
+
+        </tr>
+        <p>to return <a href="/test">Click</a></p>
+<br><br><br><br><br><hr>
+    </form>
+
+
+</section>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

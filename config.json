@@ -1,0 +1,12 @@
+{
+    "parameter":{
+    "local_uri":"mysql+pymysql://root:1234@localhost/mydb",
+    "prod_uri":"mysql+pymysql://root:1234@localhost/mydb",
+    "title":"fit website",
+    "admin_name": "shailesh",
+    "admin_pass": "1234"
+    
+
+
+}
+}

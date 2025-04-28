@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body class="text-center" >
+    <main class="form-signin">
+        <form action="/login" method="POST"style="text-align: center;">
+            <img class="mb-4" src="static/dumbles.webp" alt="Dumbbells" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Sign In/<a href="/register">Register</a></h1>
+
+            <div class="form-floating mb-3">
+                <label for="floatingInput" >User Name</label>
+                <input type="text" class="form-control" name="username" id="floatingInput" placeholder="User Name" required>
+            </div>
+
+            <div class="form-floating mb-3">
+                <label for="floatingPassword">Password</label>
+                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+            </div>
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            
+
+            <button class="btn btn-dark" type="submit">Sign in</button> </form>
+            <div>
+                Admin <a href="/admin_login">Login</a>
+            </div>
+
+            <p class="mt-5 mb-3 text-muted">&copy; Fitness website</p>
+       
+    </main>
+</body>
+</html>

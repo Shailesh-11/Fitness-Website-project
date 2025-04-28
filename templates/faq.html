@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - FAQ</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+       header {
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #fff;
+        }
+        #faq {
+            width: 80%;
+            margin: auto;
+            text-align: left;
+            padding: 20px 0;
+            flex: 1;
+        }
+        #faq h2 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .faq-item h3 {
+            margin: 0;
+            color: #007bff;
+            font-size: 20px;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <header style="background-color: #333;">
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/programs">Programs</a></li>
+                <li><a href="/store">Store</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/test">Testimonials</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="faq">
+        <h2>FAQ</h2>
+        <p>Find answers to commonly asked questions.</p>
+
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h3>What is the best program for beginners?</h3>
+            <div class="faq-answer">
+                <p>The Beginner Fitness Program is ideal for those new to fitness, offering basic exercises to build strength and flexibility.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h3>How can I lose weight effectively?</h3>
+            <div class="faq-answer">
+                <p>Our Weight Loss Program combines cardio, strength training, and nutrition guidance for effective weight loss.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h3>Do you offer yoga classes?</h3>
+            <div class="faq-answer">
+                <p>Yes, our Yoga and Mindfulness Program provides a combination of yoga practices and meditation techniques.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h3>Can I get personalized training?</h3>
+            <div class="faq-answer">
+                <p>We offer personalized training plans as part of our Athletic Performance Program for tailored sports training.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.faq-answer');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

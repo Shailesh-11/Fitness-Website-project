@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Table Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: left    ;
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Specific styling for merged cells */
+        .rowspan-6 {
+            vertical-align: middle;
+        }
+        .colspan-4 {
+            text-align: center;
+        }
+        .div1{
+            
+            margin-left:110px ;
+            border: 1px solid black;
+            margin-top: 0px;
+            height: 200px;
+            width: max;
+            
+            text-align: left;
+        }
+        .div2{ 
+            height: 100px ;
+            width: 100px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="div2">
+    <table>
+        
+        <!-- Header row -->
+        
+        <tr><td colspan="6">MITE newpaper</td></tr>
+        <!-- First Section Row -->
+        <tr>
+            <td >Department</td>
+            <td colspan="4">Details</td>
+        </tr>
+        <!-- Departments Rows -->
+        <tr>
+            <td>CS & E</td>
+        </tr>
+        <tr>
+            <td>IS & E</td>
+        </tr>
+        <tr>
+            <td>EC & E</td>
+        </tr>
+        <tr>
+            <td>MTR</td>
+        </tr>
+        <tr>
+            <td>AE</td>
+        </tr>
+        <tr>
+            <td>MCA</td>
+        </tr>
+        <tr>
+            <td>AE</td>
+        </tr>
+        <tr>
+            <td>MTR</td>
+        </tr>
+        <tr>
+            <td>MCA</td>
+        </tr>
+        <tr>
+            <td>MBA</td>
+        </tr>
+       
+    </table>
+    </section>
+
+    <section class = "div1">
+        <table>
+                <tr> <th><td rowspan="3" colspan="2">CSE</td>
+                 <td rowspan="3" colspan="2">ISE</td>
+                 <td rowspan="3" colspan="2">ISE</td></th>
+             </tr>
+             <tr></tr>
+             <tr></tr>
+             <tr></tr>
+                <tr>
+                 <td rowspan="3"colspan="2">AI</td>
+                 <td rowspan="3"colspan="2">MBA</td>
+                <td rowspan="3"colspan="2">CSE</td>
+            </tr>
+    </table>
+    </section>
+</body>
+</html>

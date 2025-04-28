@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website - Testimonials</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+                
+       header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px ;
+            text-align: center;
+            height: 40px;
+        }
+       
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header nav ul li a:hover {
+            color: #ccc;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        #testimonials {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            width:80%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            width: max;
+        }
+        .testimonial:last-child {
+            border-bottom: none;
+        }
+        .testimonial h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .testimonial p {
+            margin: 5px 0 0 0;
+                }
+  
+    </style>
+</head>
+<body>
+    <header style="background-color: #333;">
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/programs">Programs</a></li>
+                <li><a href="/store">Store</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/test">Testimonials</a></li>
+                <li><a href="/faq">FAQ</a></li>
+            </ul>
+        </nav>  
+        
+    </header>
+    <section id="testimonials" >
+        <h2>Testimonials:</h2>
+        {% for test in testimonials|reverse %}
+        <div class="testimonial">
+            <h3>{{ test.name }}</h3>
+            <p>{{ test.tests }}</p>
+        </div>
+        {% endfor %}
+        <p>if you want to add testimonial then <a href="/testimonials">Click</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
